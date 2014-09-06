@@ -12,5 +12,10 @@
   "bugs": {
     "url": "https://github.com/Bazai/htmlacademy-basic-bem/issues"
   },
-  "homepage": "https://github.com/Bazai/htmlacademy-basic-bem"
+  "homepage": "https://github.com/Bazai/htmlacademy-basic-bem",
+  "devDependencies": {
+    "csscomb": "^3.0.1",
+    "jscs": "^1.6.1",
+    "jshint": "^2.5.5"
+  }
 }
