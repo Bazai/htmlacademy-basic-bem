@@ -2,7 +2,8 @@
     "exclude": [
         "**/_*.*",
         ".git/**",
-        "node_modules/**"
+        "node_modules/**",
+        "bower_components/**"
     ],
     "always-semicolon": true,
     "block-indent": true,

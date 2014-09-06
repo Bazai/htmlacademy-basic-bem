@@ -28,6 +28,9 @@
     },
     "excludeFiles": [
         ".git/**",
-        "node_modules/**"
+        ".enb/tmp/**",
+        "node_modules/**",
+        "bower_components/**",
+        "./pages/**"
     ]
 }
