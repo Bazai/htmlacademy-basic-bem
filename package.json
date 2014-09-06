@@ -1,0 +1,16 @@
+{
+  "name": "barbershop-borodinski",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bazai/htmlacademy-basic-bem.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bazai/htmlacademy-basic-bem/issues"
+  },
+  "homepage": "https://github.com/Bazai/htmlacademy-basic-bem"
+}
