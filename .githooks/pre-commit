@@ -1,0 +1,17 @@
+#!/bin/bash
+
+CHANGED_FILES=$(git diff --cached --diff-filter=ACMTR --name-only)
+JSFILES="$(echo "$CHANGED_FILES" | grep -E '\.js$' | xargs echo)"
+CSSFILES="$(echo "$CHANGED_FILES" | grep -E '\.css$' | xargs echo)"
+
+if [ -z "$JSFILES" ]; then
+    echo "No JS files to lint."
+else
+    make jshint jscs JSFILES="$JSFILES" || exit 1
+fi
+
+if [ -z "$CSSFILES" ]; then
+    echo "No CSS files to lint."
+else
+    make csscomblint CSSFILES="$CSSFILES" || exit 1
+fi
