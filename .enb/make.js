@@ -33,7 +33,7 @@ module.exports = function(config) {
             // Создаём BEMJSON на основании типа страницы (самописная технология)
             nodeConfig.addTech([
                 require('./techs/create-page-bemjson'),
-                { type: page }
+                { pageType: page }
             ]);
 
             // BEM Decl
