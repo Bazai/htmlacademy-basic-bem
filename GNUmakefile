@@ -7,6 +7,9 @@ JSHINT = $(NPM_BIN)/jshint
 JSCS = $(NPM_BIN)/jscs
 CSSCOMB = $(NPM_BIN)/csscomb
 
+WITH_B_FLAG = $(if $(findstring B,$(MAKEFLAGS)),YES,)
+ENB_NO_CACHE = $(if $(WITH_B_FLAG),--no-cache,)
+
 .PHONY: build
 build:: $(NODE_MODULES)
 build:: .git/hooks/pre-commit
@@ -24,12 +27,17 @@ $(BOWER_COMPONENTS): $(NODE_MODULES)
 .PHONY: enb-make
 enb-make: $(NODE_MODULES) $(BOWER_COMPONENTS)
 	$(info ===> Building pages)
-	@$(ENB) make
+	@$(ENB) make $(ENB_NO_CACHE)
+
+.PHONY: watch
+watch: $(NODE_MODULES) $(BOWER_COMPONENTS)
+	$(info ===> Starting ENB server)
+	@$(ENB) server
 
 ### Прекоммит-хуки
 .git/hooks/pre-commit:
 	$(info ===> Adding pre-commit hook)
-	@ln -s $(PWD)/.githooks/pre-commit $(PWD)/.git/hooks
+	@ln -sfn $(PWD)/.githooks/pre-commit $(PWD)/.git/hooks
 
 ### Проверка код-стайла
 
