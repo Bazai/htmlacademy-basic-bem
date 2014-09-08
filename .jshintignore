@@ -1,5 +1,5 @@
 .git/
-.enb/tmp/
+.enb/tmp/**
 node_modules/
 bower_components/
-pages/
+pages/**
