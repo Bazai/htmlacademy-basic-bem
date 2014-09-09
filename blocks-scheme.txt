@@ -10,38 +10,53 @@ header
 logo
 features grid
     features__item grid_col grid__col_width_4
-    features__item grid_col grid__col_width_4 grid__col_offset_4
-    features__item grid_col grid__col_width_4 grid__col_offset_8
+        heading heading_theme_bright
+        features__description
+    features__item grid_col grid__col_width_4
+        heading heading_theme_bright
+        features__description
+    features__item grid_col grid__col_width_4
+        heading heading_theme_bright
+        features__description
 album grid
     album__left-page grid__col grid__col_width_4 grid__col_offset_1
+        heading
         news
-            news__heading
             news__entry
             news__entry
             news__more << button button_type_link
-    album__right-page grid__col grid__col_width_4 grid__col_offset_7
+    album__right-page grid__col grid__col_width_4 grid__col_offset_2
+        heading
         gallery
-            gallery__heading
             gallery__image
             gallery__prev << button button_type_link
             gallery__next << button button_type_link
 album grid
     album__left-page grid__col grid__col_width_4 grid__col_offset_1
         contacts
-            contacts__heading
-            contacts__content
-            contacts__how-to-get << button button_type_link
-            contacts__feedback << button button_type_link
-    album__right-page grid__col grid__col_width_4 grid__col_offset_7
+            (incapsulated into ctx.content
+                heading
+                contacts__content << simple-text
+                contacts__how-to-get << button button_type_link
+                contacts__feedback << button button_type_link
+            )
+    album__right-page grid__col grid__col_width_4 grid__col_offset_2
+        heading
         appointment
-            appointment__heading
-            appointment__text
-            appointment__date
-            appointment__time
-            appointment__name
-            appointment__phone
+            appointment__text << simple-text
+            appointment__date << input input_type_date
+            appointment__time << input input_type_time
+            appointment__name << input input_type_text
+            appointment__phone << input input_type_tel
             appointment__send << button
 footer grid
     contacts contacts_type_brief grid__col grid__col_width_5
-    socials grid__col grid__col_width_2 grid__col_offset_5
-    designed-by grid__col grid__col_width_2 grid__col_offset_10
+        contacts__address << simple-text simple-text_theme_bright
+    socials grid__col grid__col_width_2
+        simple-text simple-text_theme_bright
+        socials__icon << button button_type_link button_type_image
+        socials__icon << button button_type_link button_type_image
+        socials__icon << button button_type_link button_type_image
+    designed-by grid__col grid__col_width_2 grid__col_offset_3
+        simple-text simple-text_theme_bright
+        button button_type_link
