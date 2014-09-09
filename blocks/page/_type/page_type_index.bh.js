@@ -4,7 +4,8 @@ module.exports = function(bh) {
                 { block: 'header' },
                 { block: 'logo' },
                 { block: 'features' },
-                { block: 'heading', caption: 'Test' }
+                { block: 'heading', content: 'Test' },
+                { block: 'button', content: 'Вход' }
             ]);
     });
 };
