@@ -1,6 +1,7 @@
 ({
     shouldDeps: [
         { block: 'header' },
-        { block: 'menu' }
+        { block: 'menu' },
+        { block: 'button' }
     ]
 });
