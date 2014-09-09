@@ -1,4 +1,7 @@
 .page
 {
-    background: #fff;
+    width: 940px;
+    margin: 0 auto;
+
+    background: #212121;
 }
