@@ -5,6 +5,7 @@
         { block: 'button' },
         { block: 'logo' },
         { block: 'features' },
-        { block: 'heading' }
+        { block: 'heading' },
+        { block: 'simple-text' }
     ]
 });

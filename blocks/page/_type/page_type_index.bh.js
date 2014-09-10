@@ -5,6 +5,7 @@ module.exports = function(bh) {
                 { block: 'logo' },
                 { block: 'features' },
                 { block: 'heading', content: 'Test' },
+                { block: 'simple-text', content: 'Вход' },
                 { block: 'button', content: 'Вход' }
             ]);
     });
