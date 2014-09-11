@@ -6,6 +6,7 @@
         { block: 'logo' },
         { block: 'features' },
         { block: 'heading' },
-        { block: 'simple-text' }
+        { block: 'simple-text' },
+        { block: 'album' }
     ]
 });
