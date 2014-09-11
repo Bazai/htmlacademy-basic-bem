@@ -27,10 +27,10 @@ module.exports = function(bh) {
                             { block: 'contacts' },
                             { 
                                 block: 'simple-text', 
-                                content: 'sdg'
-                                // content: 'Часы работы: <br> /
-                                // ПН — ПТ: С 10:00 ДО 22:00 /
-                                // СБ — ВС: С 10:00 ДО 19:00' 
+                                // content: 'sdg'
+                                content: 'Часы работы: <br> \
+                                ПН — ПТ: С 10:00 ДО 22:00 <br> \
+                                СБ — ВС: С 10:00 ДО 19:00' 
                             },
                             { block: 'button', content: 'Как проехать' },
                             { block: 'button', content: 'Обратная связь' }
@@ -38,11 +38,21 @@ module.exports = function(bh) {
                     },
                     { block: 'album', elem: 'page-right',
                         content: [
-                            { block: 'heading' },
-                            { block: 'gallery' }
+                            { block: 'heading', content: 'Записаться' },
+                            { 
+                                block: 'simple-text', 
+                                content: 'УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И \
+                                МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ' 
+                            },
+                            { block: 'input', content: 'Дата', mods: { type: 'date' } },
+                            { block: 'input', content: 'Время', mods: { type: 'time' } },
+                            { block: 'input', content: 'Ваше имя' },
+                            { block: 'input', content: 'Телефон', mods: { type: 'tel' } },
+                            { block: 'button', content: 'Отправить' }
                         ]
                     }
-                ] }
+                ] },
+                { block: 'footer' }
             ]);
     });
 };
